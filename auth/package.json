@@ -1,0 +1,27 @@
+{
+  "name": "auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.15",
+    "express": "^4.18.2",
+    "prettier": "^2.8.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^3.8.3"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "endOfLine": "lf",
+    "quoteProps": "consistent",
+    "proseWrap": "always",
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}
