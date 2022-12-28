@@ -1,14 +1,20 @@
 - If you did not see your server restart after changing the index.ts, update 
   the start script to `ts-node-dev --poll src/index.ts`
 - typing `thisisunsafe` in chrome unsafe page overrides the blockade  
+- kubernetes **context** change by _google cloud sdk_
+  - install SDK, init and configure 
+  - to run `gcloud` in bash set up alias `gcloud="gcloud.cmd"`
+  - run `gcloud container clusters get-credentials ticketing-dev`
+  - enable `Cloud Build`
+  - set up `skaffold.yaml` properly (cloud build etc.)
+
+
 
 # ingress-nginx
 - an API object that manages external access to the services in a cluster 
   (load balancing, ssl termination, virtual hosting)
 - https://kubernetes.github.io/ingress-nginx/deploy
 - Run `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.5.1/deploy/static/provider/cloud/deploy.yaml`
-- 
-
 
 ---
 # Steps to run that stuff
