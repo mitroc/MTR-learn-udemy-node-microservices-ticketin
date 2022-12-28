@@ -5,8 +5,14 @@
   - install SDK, init and configure 
   - to run `gcloud` in bash set up alias `gcloud="gcloud.cmd"`
   - run `gcloud container clusters get-credentials ticketing-dev`
+  
+- prepare app for Google Cloud:
   - enable `Cloud Build`
   - set up `skaffold.yaml` properly (cloud build etc.)
+  - set up deployment for cloud (proper image name)
+  - set up `ingress-nginx` (mandatory command and some other stuff from GCE-GKE 
+    section of https://kubernetes.github.io/ingress-nginx/deploy/ )
+  - use GCE Load Balancer IP address as ticketing.dev (hosts file)
 
 
 
@@ -17,7 +23,7 @@
 - Run `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.5.1/deploy/static/provider/cloud/deploy.yaml`
 
 ---
-# Steps to run that stuff
+# Steps to run that stuff locally
 
 1. Create node server
 2. Create node Dockerfile (Dockerfile)
