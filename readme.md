@@ -13,8 +13,9 @@
   - set up `ingress-nginx` (mandatory command and some other stuff from GCE-GKE 
     section of https://kubernetes.github.io/ingress-nginx/deploy/ )
   - use GCE Load Balancer IP address as ticketing.dev (hosts file)
+  - run `skaffold dev`
 
-
+C:\Users\mitroc\AppData\Roaming\gcloud\application_default_credentials.json
 
 # ingress-nginx
 - an API object that manages external access to the services in a cluster 

@@ -6,7 +6,9 @@
   "scripts": {
     "start": "ts-node-dev src/index.ts"
   },
-  "keywords": [],
+  "keywords": [
+    "ticket"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {

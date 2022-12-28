@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: auth
-          image: us.gcr.io/ticketing-dev-372921/auth
+#          image: us.gcr.io/ticketing-dev-372921/auth
+          image: mitrocode/auth
 
 ---
 apiVersion: v1
