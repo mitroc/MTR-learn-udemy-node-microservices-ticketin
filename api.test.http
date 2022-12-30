@@ -1,5 +1,6 @@
 ### auth
-POST ticketing.dev/api/users/signupd
+POST ticketing.dev/api/users/signupds
+
 Content-Type: application/json
 
 {
