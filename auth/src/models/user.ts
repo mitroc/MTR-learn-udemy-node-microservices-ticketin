@@ -1,6 +1,18 @@
 import mongoose from 'mongoose';
 
+// Interface for new User
 interface UserProps {
+  email: string;
+  password: string;
+}
+
+// Interface for new User Model
+interface UserModel extends mongoose.Model<UserDocument> {
+  build(props: UserProps): UserDocument;
+}
+
+// Interface for User Document
+interface UserDocument extends mongoose.Document {
   email: string;
   password: string;
 }
@@ -15,11 +27,10 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
 });
-
-const User = mongoose.model('User', userSchema);
-
-const buildUser = (props: UserProps) => {
+userSchema.statics.build = (props: UserProps) => {
   return new User(props);
 };
 
-export { User, buildUser };
+const User = mongoose.model<UserDocument, UserModel>('User', userSchema);
+
+export { User };
