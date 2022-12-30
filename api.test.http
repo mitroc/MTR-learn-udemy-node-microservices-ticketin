@@ -1,9 +1,8 @@
 ### auth
-POST ticketing.dev/api/users/signupds
-
+POST ticketing.dev/api/users/signup
 Content-Type: application/json
 
 {
-  "email": "asdasdf.com",
+  "email": "asda@sdf.com",
   "password": "asdfasdf"
 }
