@@ -1,4 +1,4 @@
-import { scrypt, randomBytes } from 'node:crypto';
+import { randomBytes, scrypt } from 'node:crypto';
 import { promisify } from 'node:util';
 
 const scryptAsync = promisify(scrypt);
@@ -15,6 +15,7 @@ export class Password {
     const [hashedPassword, salt] = storedPassword.split('.');
     const buf = (await scryptAsync(suppliedPassword, salt, 64)) as Buffer;
 
+    // lepiej użyć timingSafeEqual
     return buf.toString('hex') === hashedPassword;
   }
 }
